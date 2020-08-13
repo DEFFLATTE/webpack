@@ -5,7 +5,7 @@
   "license": "MIT",
   "scripts": {
     "build": "webpack --config webpack.config.js",
-    "dev": "webpack-dev-server"
+    "dev": "webpack-dev-server --open --hot"
   },
   "devDependencies": {
     "@babel/core": "^7.6.4",

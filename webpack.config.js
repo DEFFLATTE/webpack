@@ -1,6 +1,6 @@
 //webpack 是node写出来的  node的写法
 let path = require('path');
-let htmlWebpackPlugin = require('html-webpack-plugin');
+let htmlWebpackPlugin = require('html-webpack-plugin');//导入  在内存中自动生成 index 页面的插件
 let MiniCssExtractPlugin = require('mini-css-extract-plugin');
 let optimizeCssAssetsWebpackPlugin = require('optimize-css-assets-webpack-plugin');
 let uglifyjs = require('uglifyjs-webpack-plugin');
@@ -31,8 +31,8 @@ module.exports = {
     },
     plugins:[//数组 放着所有的webpack插件
         new htmlWebpackPlugin({
-            template: "./src/index.html",
-            filename: "index.html",
+            template: "./src/index.html",//源文件
+            filename: "index.html",//生成的内存中首页的名称
             minify:{
                 removeAttributeQuotes:true,
                 collapseWhitespace:true
